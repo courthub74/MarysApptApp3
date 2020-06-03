@@ -80,10 +80,14 @@ WSGI_APPLICATION = 'maryappt.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',  
     }
 }
+
+DATABASES['default'] = dj_database_url.config(default='postgres://gmvtdkonxotect:87e7c46bcf2603339134783a7b33861a9725f0c171ac4d865d37b85fd5e68a81@ec2-35-169-254-43.compute-1.amazonaws.com:5432/d3s297j7fn7492')
+
+db_from_env = dj_database_url.config(conn_max_age=600)
+DATABASES['default'].update(db_from_env)
 
 
 # Password validation

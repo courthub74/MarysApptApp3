@@ -1,0 +1,85 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+
+{% block content %}
+
+<br>
+
+<!--DATEPICKER-->
+
+<div class="container">
+	<li class="list-group-item list-group-item-secondary"><h2>Appointments Made:</h2></li>
+		<br><br>
+
+			{% if all_appointments %}
+				{% for info in all_appointments %}
+					<div class="col-sm">
+						<ul class="list-group">
+							<li class="list-group-item list-group-item-secondary"><strong>{{ forloop.counter}} - Appointment Scheduled:</strong></li>
+							<li class="list-group-item">{{ info.name }}</li>
+							<li class="list-group-item">{{ info.email }}</li>
+							<li class="list-group-item">{{ info.phone }}</li>
+							<li class="list-group-item">{{ info.occupation }}</li>
+							<li class="list-group-item">{{ info.category }}</li>
+							<li class="list-group-item">{{ info.date }}</li>
+							<li class="list-group-item">{{ info.start}}</li>
+							<li class="list-group-item">{{ info.end }}</li>
+							<br>
+
+
+
+							<div class="container">
+								<li class="list-group-item color">{{ info.location }}</li>
+
+
+								<style type="text/css">
+									.goldy {
+										background-color: #FFFACD;
+									}
+									.prince {
+										background-color: #9370DB;
+									}
+								</style>
+
+								<script type="text/javascript">
+									var colorElements = document.querySelectorAll('.color');
+									colorElements.forEach(element => {
+										if (element.innerHTML == "Onsite") {
+											element.classList.add('goldy');
+										} else if (element.innerHTML == "InStudio") {
+											element.classList.add('prince');
+										}
+									});
+								</script>
+
+
+
+
+
+								<li class="list-group-item go">{{ info.loc_name }}</li>
+								<li class="list-group-item go">{{ info.address }}</li>
+								<li class="list-group-item go">{{ info.city }}</li>
+								<li class="list-group-item go">{{ info.state }}</li>
+								<li class="list-group-item go">{{ info.zipcode }}</li>
+							</div>
+							<br>
+
+
+
+							<style type="text/css">
+								.hidden {
+									display: none;
+								}
+							</style>
+
+							
+
+						</ul>
+					</div>
+				{% endfor %}
+			{% endif %}
+</div>
+
+{% endblock %}
