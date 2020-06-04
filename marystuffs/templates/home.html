@@ -9,6 +9,91 @@
 
 <!--DATEPICKER-->
 
+<!--CSS-->
+<link rel="stylesheet" type="text/css" href="{% static 'css/jquery-ui.min.css'%}">
+<!--JQuery-->
+<script src="{% static 'js/JQuery-3.5.0.min.js'%}"></script>
+<!--JQuery UI-->
+<script src="{% static 'js/JQuery-ui.min.js'%}"></script>
+
+
+<form method="POST">
+	{% csrf_token %}
+
+	<!--BODY-->
+	<div class="container">
+		<li class="list-group-item list-group-item-secondary"><h2>Enter Appointment:</h2></li>
+		</div>
+		<br>
+
+		<!--NAME-->
+		<div class="container">
+			<h4>Name:</h4>
+			<hr>
+				<input type="text" class="form-control" placeholder="Enter Name" name="name" autofocus> 
+		</div>
+		<br>
+
+
+		<!--EMAIL-->
+		<div class="container">
+			<h4>Email:</h4>
+			<hr>
+				<input type="text" class="form-control" placeholder="Enter Email" name="email" autofocus> 
+		</div>
+		<br>
+
+		<!--PHONE-->
+		<div class="container">
+			<h4>Phone:</h4>
+			<hr>
+				<input type="text" class="form-control" placeholder="Enter Phone #" name="phone" autofocus> 
+		</div>
+		<br>
+
+		<!--OCCUPATION-->
+		<div class="container">
+			<h4>Occupation:</h4>
+			<hr>
+				<input type="text" class="form-control" placeholder="Enter Occupation" name="occupation" autofocus> 
+		</div>
+		<br>
+
+
+		<!--CATEGORY-->
+		
+			
+				<div class="container">
+					<section>
+						<h4>Category of Shoot</h4>
+						<hr>
+							<select name="category" id="category" class="form-control">
+								<option>Select:</option>
+								<option value="Executive">Executive</option>
+								<option value="Headshots">Headshots</option>
+								<option value="New Models">New Models</option>
+								<option value="Portraiture">Portraiture</option>
+								<option value="Comp Cards">Comp Cards</option>
+								<option value="Senior Sessions">Senior Sessions</option>
+								<option value="Pageant">Pageant</option>
+							</select>
+					</section>
+				</div>
+
+
+				
+
+
+
+			
+		
+
+
+
+	
+</form>
+
+
 
 
 {% endblock %}
