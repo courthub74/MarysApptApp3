@@ -38,9 +38,29 @@
 		    </form>
 		  </div>
 	</nav>
+	<br>
+
+
 
 	<!--MARYS LOGO-->
 	<a href="https://marydupriestudio.com/" target="_blank"><img src="https://marydupriestudio.com/wordpress/wp-content/uploads/2020/02/name.logo_.300-1.jpg" height="180" width="380" /></a> 
+
+	<br>
+
+	
+			<!--MESSAGE-->
+			<div class="container">
+			{% if messages %}
+				{% for message in messages %}
+					<div class="alert alert-warning alert-dismissable" role="alert">
+					   		<button class="close" data-dismiss="alert">
+					   			<small><sup>Close</sup></small>
+					   		</button>
+					   	{{ message }}
+					</div>
+				{% endfor %}
+			{% endif %}
+			</div>
 
 
 			<!--Block Content-->

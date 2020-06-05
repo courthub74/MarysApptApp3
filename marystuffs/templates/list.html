@@ -6,6 +6,7 @@
 {% block content %}
 
 <br>
+          {{ info.loc_name }}
 
 <!--DATEPICKER-->
 
@@ -17,7 +18,7 @@
 				{% for info in all_appointments %}
 					<div class="col-sm">
 						<ul class="list-group">
-							<li class="list-group-item list-group-item-secondary"><strong>{{ forloop.counter}} - Appointment Scheduled:</strong></li>
+							<li class="list-group-item list-group-item-secondary"><strong>Appointment: {{ forloop.counter}}</strong></li>
 							<li class="list-group-item">{{ info.name }}</li>
 							<li class="list-group-item">{{ info.email }}</li>
 							<li class="list-group-item">{{ info.phone }}</li>
@@ -31,7 +32,8 @@
 
 
 							<div class="container">
-								<li class="list-group-item color">{{ info.location }}</li>
+								<h4><span class="badge badge-dark">Location:</span></h4>
+								<li class="list-group-item color hide">{{ info.location }}</li>
 
 
 
@@ -41,21 +43,20 @@
 										background-color: #FFFACD;
 									}
 									.prince {
-										background-color: #9370DB;
+										background-color: #DDA0DD;
 									}
 								</style>
 
 								<script type="text/javascript">
 									var colorElements = document.querySelectorAll('.color');
 									colorElements.forEach(element => {
-										if (element.innerHTML == "Onsite") {
+										if (element.innerHTML == "OnSite") {
 											element.classList.add('goldy');
 										} else if (element.innerHTML == "InStudio") {
 											element.classList.add('prince');
 										}
 									});
 								</script>
-
 
 								<li class="list-group-item go">{{ info.loc_name }}</li>
 								<li class="list-group-item go">{{ info.address }}</li>
@@ -75,10 +76,17 @@
 							<script type="text/javascript">
 								var allElements = document.querySelectorAll('.go');
 								allElements.forEach(element => {
-									if (element.innerHTML == "InStudio") {
+									if (element.innerHTML == "None") {
 										element.classList.add('hidden');
 									};
 								});
+							</script>
+
+							<script type="text/javascript">
+								var spice = document.querySelectorAll('.hide');
+								if (spice.innerHTML == "InStudio") {
+									go.classList.add('hidden');
+								};
 							</script>
 
 
@@ -87,6 +95,8 @@
 					</div>
 				{% endfor %}
 			{% endif %}
+
+
 </div>
 
 {% endblock %}
