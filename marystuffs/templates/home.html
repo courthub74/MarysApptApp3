@@ -143,7 +143,7 @@
 		<div class="input-group mb-3">
 			<div class="input-group-prepend">
 				<div class="input-group-text">
-					<input type="radio" aria-label="Radio button for following text input" name="location" id="checked" value="InStudio">
+					<input type="radio" aria-label="Radio button for following text input" name="location" id="checked2" value="InStudio">
 				</div>
 			</div>
 			<label type="text" class="form-control" aria-label="Text input with radio">InStudio</label>
@@ -153,18 +153,85 @@
 		<div class="input-group mb-3">
 			<div class="input-group-prepend">
 				<div class="input-group-text">
-					<input type="radio" aria-label="Radio button for following text input" name="location" id="checked2" value="OnSite">
+					<input type="radio" aria-label="Radio button for following text input" name="location" id="checked" value="OnSite">
 				</div>
 			</div>
 			<label type="text" class="form-control" aria-label="Text input with radio">OnSite</label>
 		</div>
+
+
+		<!--Dissable Javascript for OnSite when InStudio is checked-->
+		<script type="text/javascript">
+			$(function() {
+				$("#checked").change(function() {
+					var set = this.checked;
+					if (set) {
+						$("#other").prop("disabled", false); //OnSite
+						$("#other2").prop("disabled", false); //OnSite
+						$("#other3").prop("disabled", false); //OnSite
+						$("#other4").prop("disabled", false); //OnSite
+						$("#other5").prop("disabled", false); //OnSite
+					}
+
+					else {
+						$("#other").prop("disabled", true); //InStudio
+					}
+				});
+			});
+			$(function() {
+				$("#checked2").change(function() {
+					var set2 = this.checked;
+					if (set2) {
+						$("#other").prop("disabled", true);
+						$("#other2").prop("disabled", true);
+						$("#other3").prop("disabled", true);
+						$("#other4").prop("disabled", true);
+						$("#other5").prop("disabled", true);
+					}
+
+					else {
+						$("#other").prop("disabled", false);
+					}
+				});
+			});
+		</script>
+
+
+		<br>
+
+
+		<!--If ONSITE then add address-->
+		<li class="list-group-item list-group-item-primary"><strong>If Onsite add the address:</strong></li>
+		<br>
+		<div class="form-group">
+		    <input type="text" class="form-control" id="other" placeholder="Location Name" name="loc_name" disabled="other">
+		</div>
+		<br>
+		<div class="form-group">
+		    <input type="text" class="form-control" id="other2"  placeholder="Address" name="address" disabled="other2">
+		</div>
+		<br>
+		<div class="form-group">
+		    <input type="text" class="form-control" id="other3" placeholder="City" name="city" disabled="other3">
+		</div>
+		<br>
+		<div class="form-group">
+		    <input type="text" class="form-control" id="other4" placeholder="State" name="state" disabled="other4">
+		</div>
+		<br>
+		<div class="form-group">
+		    <input type="text" class="form-control" id="other5" placeholder="Zip" name="zipcode" disabled="other5">
+		</div>
+
+		<hr>
+		<div class="container">
+			<button type="submit" class="btn btn-md btn-block btn-primary">Submit Appointment</button>
+		</div>
+
+
 	</div>
-
-
 <br><br>
 </form>
-
-
 
 
 {% endblock %}
