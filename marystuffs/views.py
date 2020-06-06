@@ -23,4 +23,8 @@ def home(request):
 #LIST PAGE
 def list(request):
 	all_appointments = Appointment.objects.all
-	return render(request, "list.html", {'all_appointments': all_appointments})
+	search_name = ""
+	if 'search' in request.GET:
+		search_name = request.GET['search']
+		all_appointments = Appointment.objects.filter(name=search_name) #Add the Startswith
+	return render(request, "list.html", {'all_appointments': all_appointments, 'search_name': search_name})
