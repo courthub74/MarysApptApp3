@@ -10,11 +10,11 @@ class Appointment(models.Model):
 	start = models.CharField(max_length=200)
 	end = models.CharField(max_length=200)
 	location = models.CharField(max_length=200)
-	loc_name = models.CharField(max_length=200)
-	address = models.CharField(max_length=200)
-	city = models.CharField(max_length=200)
-	state = models.CharField(max_length=200)
-	zipcode = models.CharField(max_length=200)
+	loc_name = models.CharField(max_length=200, blank=True, null=True)
+	address = models.CharField(max_length=200, blank=True, null=True)
+	city = models.CharField(max_length=200, blank=True, null=True)
+	state = models.CharField(max_length=200, blank=True, null=True)
+	zipcode = models.CharField(max_length=200, blank=True, null=True)
 
 
 	def __str__(self):

@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 
-{% load static %}
+
 
 
 {% block content %}
@@ -40,7 +40,7 @@
 
 								<style type="text/css">
 									.goldy {
-										background-color: #FFFACD;
+										background-color: #FFD700;
 									}
 									.prince {
 										background-color: #DDA0DD;
@@ -58,11 +58,14 @@
 									});
 								</script>
 
-								<li class="list-group-item go">{{ info.loc_name }}</li>
-								<li class="list-group-item go">{{ info.address }}</li>
-								<li class="list-group-item go">{{ info.city }}</li>
-								<li class="list-group-item go">{{ info.state }}</li>
-								<li class="list-group-item go">{{ info.zipcode }}</li>
+
+								<div id="locablock">
+									<li class="list-group-item go">{{ info.loc_name }}</li>
+									<li class="list-group-item go">{{ info.address }}</li>
+									<li class="list-group-item go">{{ info.city }}</li>
+									<li class="list-group-item go">{{ info.state }}</li>
+									<li class="list-group-item go">{{ info.zipcode }}</li>
+								</div>
 							</div>
 							<br>
 
@@ -81,14 +84,6 @@
 									};
 								});
 							</script>
-
-							<script type="text/javascript">
-								var spice = document.querySelectorAll('.hide');
-								if (spice.innerHTML == "InStudio") {
-									go.classList.add('hidden');
-								};
-							</script>
-
 
 
 						</ul>
