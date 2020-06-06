@@ -20,6 +20,7 @@
 						<ul class="list-group">
 							<li class="list-group-item list-group-item-secondary"><strong>Appointment: {{ forloop.counter}}</strong></li>
 							<li class="list-group-item">{{ info.name }}</li>
+							<li class="list-group-item">{{ info.last }}</li>
 							<li class="list-group-item">{{ info.email }}</li>
 							<li class="list-group-item">{{ info.phone }}</li>
 							<li class="list-group-item">{{ info.occupation }}</li>
@@ -67,6 +68,8 @@
 									<li class="list-group-item go">{{ info.zipcode }}</li>
 								</div>
 								<hr>
+								<!--EDIT BUTTON-->
+								<a href="{% url 'edit' info.id %}" class="btn btn-block btn-dark">Edit Appointment</a>
 							</div>
 							<br>
 

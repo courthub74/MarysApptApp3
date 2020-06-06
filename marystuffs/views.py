@@ -28,3 +28,35 @@ def list(request):
 		search_name = request.GET['search']
 		all_appointments = Appointment.objects.filter(name=search_name) #Add the Startswith
 	return render(request, "list.html", {'all_appointments': all_appointments, 'search_name': search_name})
+
+
+
+#EDIT PAGE
+def edit(request, list_id):
+	if request.method == 'POST':
+		current_appointment = Appointment.objects.get(pk=list_id)
+		form = AppointmentForm(request.POST or None, instance=current_appointment)
+		if form.is_valid():
+			form.save()
+			messages.success(request, ('Appointment Has Been Edited...'))
+			return redirect('list')
+		else:
+			messages.success(request, ('Seems Like There Was an Error...'))
+			return render(request, 'list.html', {})
+	else:
+		get_appointment = Appointment.objects.get(pk=list_id)
+		return render(request, 'edit.html', {'get_appointment': get_appointment})
+
+
+
+
+#DELETE PAGE
+def delete(request, list_id):
+	if request.method == 'POST':
+		current_appointment = Appointment.objects.get(pk=list_id)
+		current_appointment.delete()
+		messages.success(request, ('Appointment Has Been Deleted...'))
+		return redirect('list')
+	else:
+		messages.success(request, ('Nothing to See Here...'))
+		return redirect('list')
