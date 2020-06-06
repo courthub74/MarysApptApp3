@@ -18,16 +18,16 @@
 				{% for info in all_appointments %}
 					<div class="col-sm">
 						<ul class="list-group">
-							<li class="list-group-item list-group-item-secondary"><strong>Appointment: {{ forloop.counter}}</strong></li>
-							<li class="list-group-item">{{ info.name }}</li>
-							<li class="list-group-item">{{ info.last }}</li>
-							<li class="list-group-item">{{ info.email }}</li>
-							<li class="list-group-item">{{ info.phone }}</li>
-							<li class="list-group-item">{{ info.occupation }}</li>
-							<li class="list-group-item">{{ info.category }}</li>
-							<li class="list-group-item">{{ info.date }}</li>
-							<li class="list-group-item">{{ info.start}}</li>
-							<li class="list-group-item">{{ info.end }}</li>
+							<li class="list-group-item list-group-item-secondary"><strong>Appointment {{ forloop.counter}}:</strong></li>
+							<li class="list-group-item">First: <strong>{{ info.name }}</strong></li>
+							<li class="list-group-item">Last: <strong>{{ info.last }}</strong></li>
+							<li class="list-group-item">Email: <strong>{{ info.email }}</strong></li>
+							<li class="list-group-item">Phone: <strong>{{ info.phone }}</strong></li>
+							<li class="list-group-item">Occupation: <strong>{{ info.occupation }}</strong></li>
+							<li class="list-group-item">Category of Shoot: <strong>{{ info.category }}</strong></li>
+							<li class="list-group-item">Date: <strong>{{ info.date }}</strong></li>
+							<li class="list-group-item">Start Time: <strong>{{ info.start}}</strong></li>
+							<li class="list-group-item">End Time: <strong>{{ info.end }}</strong></li>
 							<br>
 
 

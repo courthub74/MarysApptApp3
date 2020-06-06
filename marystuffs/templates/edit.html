@@ -39,7 +39,7 @@
 		<div class="container">
 			<h4>Last:</h4>
 			<hr>
-				<input type="text" class="form-control" value="{{ get_appointment.last }}" name="name" autofocus> 
+				<input type="text" class="form-control" value="{{ get_appointment.last }}" name="last" autofocus> 
 		</div>
 		<br>
 
@@ -230,7 +230,12 @@
 
 		<hr>
 
+		<div class="form-group">
+			<input type="hidden" value="{{ get_appointment.id }}" name="id">
+		</div>
 
+			<button type="submit" class="btn btn-block btn-secondary">Edit Entry</button>
+			<br>
 		
 
 
