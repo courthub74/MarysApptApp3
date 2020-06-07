@@ -118,12 +118,16 @@
 			<div class="container">
 
 				<h4>Start Time:</h4> 
+				<small>original start time: {{ get_appointment.start }} |</small>
+				<small>Click below to reselect or change:</small>
 				<hr>
 				<input class="timepicker text-center form-control" jt-timepicker="" time="model.time" time-string="model.timeString" default-time="model.options.defaultTime" time-format="model.options.timeFormat" start-time="model.options.startTime" min-time="model.options.minTime" max-time="model.options.maxTime" interval="model.options.interval" dynamic="model.options.dynamic" scrollbar="model.options.scrollbar" dropdown="model.options.dropdown" name="start" value="{{ get_appointment.start }}">
 
 				<br>
 
 				<h4>End Time:</h4>
+				<small>original end time: {{ get_appointment.end }} |</small>
+				<small>Click below to reselect or change:</small>
 				<hr>
 				<input class="timepicker text-center form-control" jt-timepicker="" time="model.time" time-string="model.timeString" default-time="model.options.defaultTime" time-format="model.options.timeFormat" start-time="model.options.startTime" min-time="model.options.minTime" max-time="model.options.maxTime" interval="model.options.interval" dynamic="model.options.dynamic" scrollbar="model.options.scrollbar" dropdown="model.options.dropdown" name="end" value="{{ get_appointment.end }}">
 
@@ -172,6 +176,28 @@
 				</div>
 				<label type="text" class="form-control" aria-label="Text input with radio">OnSite</label>
 			</div>
+
+
+
+			<!--If checked is checked then check this-->
+			<script type="text/javascript">
+				$(function() {
+					$("#checked2").change(function() {
+						var locheck = this.checked;
+						if (locheck) {
+							//check the InStudio dial
+							document.getElementById("checked2").checked = true;
+						}
+
+						else {
+							//check the OnSite dial
+							document.getElementById("checked").checked = true;
+						}
+					});
+				});
+			</script>
+
+
 
 
 			<!--Dissable Javascript for OnSite when InStudio is checked-->
