@@ -6,6 +6,7 @@ from django.contrib import messages
 
 #ADD APPOINTMENTS PAGE
 def home(request):
+	#typein = respond.Get['entry']
 	if request.method == 'POST':
 		form = AppointmentForm(request.POST or None)
 		if form.is_valid():
