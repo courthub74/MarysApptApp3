@@ -18,6 +18,19 @@ def home(request):
 	else:
 		return render(request, "home.html", {})
 
+
+#NOLIST PAGE
+#def nolist(request):
+#	if request.method == 'POST':
+#		if form.is_valid():
+#			form.save()
+#			return redirect('list')
+#		else:
+#			messages.success(request, ('Seems Like There was an Error'))
+#			return render(request, "home.html", {})
+#	else:
+#		return render(request, "home.html", {})
+
 	
 
 #LIST PAGE
