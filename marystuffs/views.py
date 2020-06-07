@@ -50,3 +50,13 @@ def edit(request, list_id):
 
 
 
+#DELETE PAGE
+def delete(request, list_id):
+	if request.method == 'POST':
+		current_appointment = Appointment.objects.get(pk=list_id)
+		current_appointment.delete()
+		messages.success(request, ('Appointment Has Been Deleted...'))
+		return redirect('list')
+	else:
+		messages.success(request, ('Nothing To See Here...'))
+		return redirect('list')

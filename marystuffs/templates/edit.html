@@ -231,8 +231,6 @@
 			    <input type="text" class="form-control" id="other5" placeholder="Zip" value="{{ get_appointment.zipcode }}" name="zipcode" disabled="other5">
 			</div>
 
-			<hr>
-
 
 			<!--EDIT BUTTON-->
 			<div class="form-group">
@@ -241,16 +239,21 @@
 
 				<button type="submit" class="btn btn-block btn-secondary">Edit Entry</button>
 			
-				<hr>
-
-			<!--DELETE BUTTON-->
-			
 			<hr>
+		</div>
+	</form>
 
+	<!--DELETE BUTTON-->
+		<div class="container">
+		<form method="POST" action="{% url 'delete' get_appointment.id %}">
+			{% csrf_token %}
+			<input type="hidden" value="{{ get_appointment.id }}" name="id">
+			<button type="submit" class="btn btn-block btn-danger">Delete Entry</button>
+		</form>
 
 		</div>
-	<br><br>
-	</form>
+
+	  <br><br>
 
 	{% endif %}
 
