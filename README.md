@@ -7,4 +7,4 @@ Its been pushed to Heroku
     * ~~It mysteriously was routing to edit even though url pointed to delete~~
 * Blank out back dates
 * Possibly add a visible calendar where the appointments are loaded
-* Fill in ALL fields on the edit screen
+* ~~Fill in ALL fields on the edit screen~~
