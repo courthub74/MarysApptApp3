@@ -3,17 +3,26 @@
 
 
 
-{% block content %}
+{% block content %}   
 
 <br>
-          {{ info.loc_name }}
+<hr>
 
 <!--DATEPICKER-->
+  <style type="text/css">
+  	.center {
+		text-align: center;
+  	}
+  </style>
 
-<div class="container">
-	<li class="list-group-item list-group-item-secondary"><h2>Appointments Set:</h2></li>
-		<br><br>
-
+	<div class="center">
+	<span class="d-block p-2 bg-dark text-white"><strong>Appointments List:</strong></span>
+	</div>
+	<!--<li class="list-group-item list-group-item-secondary"><h2>Appointments Set:</h2></li>-->
+	
+	
+	<br>		
+		<div class="container">
 			{% if all_appointments %}
 				{% for info in all_appointments %}
 					<div class="col-sm">
