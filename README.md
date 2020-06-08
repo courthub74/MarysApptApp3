@@ -9,4 +9,4 @@ Its been pushed to Heroku
 * Possibly add a visible calendar where the appointments are loaded
 * ~~Fill in ALL fields on the edit screen~~
 * Transfer the Location Radio Dial information
-* Clear the 'Nones' from the Onsite fields
+* ~~Clear the 'Nones' from the Onsite fields~~
