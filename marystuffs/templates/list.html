@@ -8,7 +8,6 @@
 <br>
 <hr>
 
-<!--DATEPICKER-->
   <style type="text/css">
   	.center {
 		text-align: center;
@@ -18,9 +17,21 @@
 	<div class="center">
 	<span class="d-block p-2 bg-dark text-white"><strong>Appointments List:</strong></span>
 	</div>
+	<br>
+			<!--MESSAGE-->
+			<div class="container">
+			{% if messages %}
+				{% for message in messages %}
+					<div class="alert alert-primary alert-dismissable" role="alert">
+					   		<button class="close" data-dismiss="alert">
+					   			<small><sup>Close</sup></small>
+					   		</button>
+					   	{{ message }}
+					</div>
+				{% endfor %}
+			{% endif %}
+			</div>
 	<!--<li class="list-group-item list-group-item-secondary"><h2>Appointments Set:</h2></li>-->
-	
-	
 	<br>		
 		<div class="container">
 			{% if all_appointments %}
