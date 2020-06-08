@@ -161,7 +161,7 @@
 			<div class="input-group mb-3">
 				<div class="input-group-prepend">
 					<div class="input-group-text">
-						<input type="radio" aria-label="Radio button for following text input" name="location" id="checked2"> 
+						<input type="radio" aria-label="Radio button for following text input" name="location" id="checked2" value="InStudio"> 
 					</div>
 				</div>
 				<label type="text" class="form-control" aria-label="Text input with radio">InStudio</label>
@@ -171,7 +171,7 @@
 			<div class="input-group mb-3">
 				<div class="input-group-prepend">
 					<div class="input-group-text">
-						<input type="radio" aria-label="Radio button for following text input" name="location" id="checked">
+						<input type="radio" aria-label="Radio button for following text input" name="location" id="checked" value="OnSite">
 					</div>
 				</div>
 				<label type="text" class="form-control" aria-label="Text input with radio">OnSite</label>
@@ -182,7 +182,7 @@
 			<!--If checked is checked then check this-->
 			<script type="text/javascript">
 				// IF 'value' of checked2 == 'Instudio' do:
-				document.getElementById("checked").checked = true;
+				//document.getElementById("checked").checked = true;
 				
 					
 			</script>
@@ -260,6 +260,10 @@
 				var inputElements = document.getElementById("other");
 				if (inputElements.value == "None") {
 					document.getElementById("other").value = "";
+					document.getElementById("other2").value = "";
+					document.getElementById("other3").value = "";
+					document.getElementById("other4").value = "";
+					document.getElementById("other5").value = "";
 					console.log('I need to clear "None"');
 				} 
 				
