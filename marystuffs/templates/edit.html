@@ -178,16 +178,6 @@
 			</div>
 
 
-
-			<!--If checked is checked then check this-->
-			<script type="text/javascript">
-				// IF 'value' of checked2 == 'Instudio' do:
-				//document.getElementById("checked").checked = true;
-				
-					
-			</script>
-
-
 	
 
 			<!--Dissable Javascript for OnSite when InStudio is checked-->
@@ -234,23 +224,23 @@
 			<li class="list-group-item list-group-item-primary"><strong>If Onsite add the address:</strong></li>
 			<br>
 			<div class="form-group">
-			    <input type="text" class="form-control clear" id="other" placeholder="Location Name" value="{{ get_appointment.loc_name }}" name="loc_name">
+			    <input type="text" class="form-control clear" id="other" placeholder="Location Name" value="{{ get_appointment.loc_name }}" name="loc_name" disabled="other">
 			</div>
 			
 			<div class="form-group">
-			    <input type="text" class="form-control clear" id="other2"  placeholder="Address" value="{{ get_appointment.address }}" name="address">
+			    <input type="text" class="form-control clear" id="other2"  placeholder="Address" value="{{ get_appointment.address }}" name="address" disabled="other2">
 			</div>
 			
 			<div class="form-group">
-			    <input type="text" class="form-control clear" id="other3" placeholder="City" value="{{ get_appointment.city }}" name="city">
+			    <input type="text" class="form-control clear" id="other3" placeholder="City" value="{{ get_appointment.city }}" name="city" disabled="other3">
 			</div>
 			
 			<div class="form-group">
-			    <input type="text" class="form-control clear" id="other4" placeholder="State" value="{{ get_appointment.state }}" name="state">
+			    <input type="text" class="form-control clear" id="other4" placeholder="State" value="{{ get_appointment.state }}" name="state" disabled="other4">
 			</div>
 			
 			<div class="form-group">
-			    <input type="text" class="form-control clear" id="other5" placeholder="Zip" value="{{ get_appointment.zipcode }}" name="zipcode">
+			    <input type="text" class="form-control clear" id="other5" placeholder="Zip" value="{{ get_appointment.zipcode }}" name="zipcode" disabled="other5">
 			</div>
 
 
@@ -267,6 +257,27 @@
 				} 
 				
 				//document.getElementById('other').reset()
+			</script>
+
+
+			
+			<!--If checked is checked then check this-->
+			<script type="text/javascript">
+				// IF 'value' of checked2 == 'Instudio' do:
+				//document.getElementById("checked").checked = true;
+				var instude = ("{{ get_appointment.location }}")
+				if ((instude) == "InStudio"){
+					document.getElementById("checked2").checked = true;
+					
+				} else if ((instude) == "OnSite"){
+					document.getElementById("checked").checked = true;
+					$("#other").prop("disabled", false); //OnSite
+					$("#other2").prop("disabled", false); //OnSite
+					$("#other3").prop("disabled", false); //OnSite
+					$("#other4").prop("disabled", false); //OnSite
+					$("#other5").prop("disabled", false); //OnSite
+				} 
+					
 			</script>
 
 
