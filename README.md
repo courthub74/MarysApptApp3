@@ -10,4 +10,4 @@ Its been pushed to Heroku
 * ~~Fill in ALL fields on the edit screen~~
 * Transfer the Location Radio Dial information
 * ~~Clear the 'Nones' from the Onsite fields~~
-* Make back to Appts list pop up only on search page
+* ~~Make back to Appts list pop up only on search page~~
