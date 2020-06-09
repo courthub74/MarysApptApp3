@@ -119,7 +119,7 @@
 
 				<h4>Start Time:</h4> 
 				<small>original start time: <b>{{ get_appointment.start }}</b> |</small><br>
-				<small>Click below to reselect or change:</small>
+				<small><strong>Click below to reselect or change:</strong></small>
 				<hr>
 				<input class="timepicker text-center form-control" jt-timepicker="" time="model.time" time-string="model.timeString" default-time="model.options.defaultTime" time-format="model.options.timeFormat" start-time="model.options.startTime" min-time="model.options.minTime" max-time="model.options.maxTime" interval="model.options.interval" dynamic="model.options.dynamic" scrollbar="model.options.scrollbar" dropdown="model.options.dropdown" name="start" value="{{ get_appointment.start }}">
 
@@ -127,7 +127,7 @@
 
 				<h4>End Time:</h4>
 				<small>original end time: <b>{{ get_appointment.end }}</b> |</small><br>
-				<small>Click below to reselect or change:</small>
+				<small><strong>Click below to reselect or change:</strong></small>
 				<hr>
 				<input class="timepicker text-center form-control" jt-timepicker="" time="model.time" time-string="model.timeString" default-time="model.options.defaultTime" time-format="model.options.timeFormat" start-time="model.options.startTime" min-time="model.options.minTime" max-time="model.options.maxTime" interval="model.options.interval" dynamic="model.options.dynamic" scrollbar="model.options.scrollbar" dropdown="model.options.dropdown" name="end" value="{{ get_appointment.end }}">
 
@@ -224,22 +224,27 @@
 			<li class="list-group-item list-group-item-primary"><strong>If Onsite add the address:</strong></li>
 			<br>
 			<div class="form-group">
+				<p>Location Name:</p>
 			    <input type="text" class="form-control clear" id="other" placeholder="Location Name" value="{{ get_appointment.loc_name }}" name="loc_name" disabled="other">
 			</div>
 			
 			<div class="form-group">
+				<p>Address:</p>
 			    <input type="text" class="form-control clear" id="other2"  placeholder="Address" value="{{ get_appointment.address }}" name="address" disabled="other2">
 			</div>
 			
 			<div class="form-group">
+				<p>City:</p>
 			    <input type="text" class="form-control clear" id="other3" placeholder="City" value="{{ get_appointment.city }}" name="city" disabled="other3">
 			</div>
 			
 			<div class="form-group">
+				<p>State:</p>
 			    <input type="text" class="form-control clear" id="other4" placeholder="State" value="{{ get_appointment.state }}" name="state" disabled="other4">
 			</div>
 			
 			<div class="form-group">
+				<p>Zip:</p>
 			    <input type="text" class="form-control clear" id="other5" placeholder="Zip" value="{{ get_appointment.zipcode }}" name="zipcode" disabled="other5">
 			</div>
 
@@ -260,7 +265,7 @@
 			</script>
 
 
-			
+
 			<!--If checked is checked then check this-->
 			<script type="text/javascript">
 				// IF 'value' of checked2 == 'Instudio' do:
