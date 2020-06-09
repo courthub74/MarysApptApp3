@@ -20,6 +20,7 @@ def home(request):
 		return render(request, "home.html", {})
 
 
+
 #NOLIST PAGE
 #def nolist(request):
 #	if request.method == 'POST':
@@ -75,4 +76,3 @@ def delete(request, list_id):
 		messages.success(request, ('Nothing To See Here...'))
 		return redirect('list')
 
-		

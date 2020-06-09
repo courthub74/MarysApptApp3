@@ -33,45 +33,43 @@
 
 		<!--NAME-->
 		<div class="container">
-			<h4>First:</h4>
-			<hr>
-				<input type="text" class="form-control" placeholder="Enter Name" name="name" autofocus> 
+			<h5>First:</h5>
+				<input type="text" class="form-control" placeholder="" name="name" autofocus> 
+				<br>
 		</div>
-		<br>
+		
 
 		<div class="container">
-			<h4>Last:</h4>
-			<hr>
-				<input type="text" class="form-control" placeholder="Enter Name" name="last" autofocus> 
+			<h5>Last:</h5>
+				<input type="text" class="form-control" placeholder="" name="last" autofocus> 
 		</div>
 		<br>
 
 
 		<!--EMAIL-->
 		<div class="container">
-			<h4>Email:</h4>
-			<hr>
-				<input type="text" class="form-control" placeholder="Enter Email" name="email" autofocus> 
+			<h5>Email:</h5>
+				<input type="text" class="form-control" placeholder="" name="email" autofocus> 
+				<br>
 		</div>
-		<br>
+		
 
 
 		<!--PHONE-->
 		<div class="container">
-			<h4>Phone:</h4>
-			<hr>
-				<input type="text" class="form-control" placeholder="Enter Phone #" name="phone" autofocus> 
+			<h5>Phone:</h5>
+				<input type="text" class="form-control" placeholder="" name="phone" autofocus> 
+				<br>
 		</div>
-		<br>
 
 
 		<!--OCCUPATION-->
 		<div class="container">
-			<h4>Occupation:</h4>
-			<hr>
-				<input type="text" class="form-control" placeholder="Enter Occupation" name="occupation" autofocus> 
+			<h5>Occupation:</h5>
+				<input type="text" class="form-control" placeholder="" name="occupation" autofocus> 
+				<br>
 		</div>
-		<br>
+		
 
 
 		<!--CATEGORY-->
@@ -79,10 +77,10 @@
 			
 				<div class="container">
 					<section>
-						<h4>Category of Shoot</h4>
+						<h5>Category of Shoot</h5>
 						<hr>
 							<select name="category" id="category" class="form-control">
-								<option>Select:</option>
+								<option>Click or Tap to Select:</option>
 								<option value="Executive">Executive</option>
 								<option value="Headshots">Headshots</option>
 								<option value="New Models">New Models</option>
@@ -99,9 +97,9 @@
 
 		<!--DATEPICKER-->
 		<div class="container">
-			<h4>Select Date:</h4>
+			<h5>Select Date:</h5>
 			<hr>
-				<input type="text" class="form-control" id="datepicker" placeholder="click here:" name="date" autocomplete="off">
+				<input type="text" class="form-control" id="datepicker" placeholder="Click or Tap to Select:" name="date" autocomplete="off">
 		</div>
 
 		<script>
@@ -117,15 +115,15 @@
 
 		<div class="container">
 
-			<h4>Start Time:</h4>
+			<h5>Start Time:</h5>
 			<hr>
-			<input class="timepicker text-center form-control" jt-timepicker="" time="model.time" time-string="model.timeString" default-time="model.options.defaultTime" time-format="model.options.timeFormat" start-time="model.options.startTime" min-time="model.options.minTime" max-time="model.options.maxTime" interval="model.options.interval" dynamic="model.options.dynamic" scrollbar="model.options.scrollbar" dropdown="model.options.dropdown" name="start">
+			<input class="timepicker text-center form-control" jt-timepicker="" time="model.time" time-string="model.timeString" default-time="model.options.defaultTime" time-format="model.options.timeFormat" start-time="model.options.startTime" min-time="model.options.minTime" max-time="model.options.maxTime" interval="model.options.interval" dynamic="model.options.dynamic" scrollbar="model.options.scrollbar" dropdown="model.options.dropdown" name="start" placeholder="Click or Tap to select:">
 
 			<br>
 
-			<h4>End Time:</h4>
+			<h5>End Time:</h5>
 			<hr>
-			<input class="timepicker text-center form-control" jt-timepicker="" time="model.time" time-string="model.timeString" default-time="model.options.defaultTime" time-format="model.options.timeFormat" start-time="model.options.startTime" min-time="model.options.minTime" max-time="model.options.maxTime" interval="model.options.interval" dynamic="model.options.dynamic" scrollbar="model.options.scrollbar" dropdown="model.options.dropdown" name="end">
+			<input class="timepicker text-center form-control" jt-timepicker="" time="model.time" time-string="model.timeString" default-time="model.options.defaultTime" time-format="model.options.timeFormat" start-time="model.options.startTime" min-time="model.options.minTime" max-time="model.options.maxTime" interval="model.options.interval" dynamic="model.options.dynamic" scrollbar="model.options.scrollbar" dropdown="model.options.dropdown" name="end" placeholder="Click or Tap to select:">
 
 
 					<script>
@@ -134,7 +132,7 @@
 							interval: 30,
 							minTime: '9',
 							maxTime: '10:00pm',
-							defaultTime: '11',
+							defaultTime: 'Click or Tap to select:',
 							startTime: '9:00',
 							dynamic: false,
 							dropdown: true,
@@ -146,7 +144,7 @@
 
 
 		<!--LOCATION-->
-		<h4>Location:</h4>
+		<h5>Location:</h5>
 		<hr>
 		<div class="input-group mb-3">
 			<div class="input-group-prepend">
@@ -209,26 +207,31 @@
 
 
 		<!--If ONSITE then add address-->
-		<li class="list-group-item list-group-item-primary"><strong>If Onsite add the address:</strong></li>
+		<li class="list-group-item list-group-item-primary"><strong>If Onsite add the address:</strong><br></li>
 		<br>
 		<div class="form-group">
-		    <input type="text" class="form-control" id="other" placeholder="Location Name" name="loc_name" disabled="other">
+			<p>Location Name:</p>
+		    <input type="text" class="form-control" id="other" placeholder="You can enter just this if you want:" name="loc_name" disabled="other">
 		</div>
 		
 		<div class="form-group">
-		    <input type="text" class="form-control" id="other2"  placeholder="Address" name="address" disabled="other2">
+			<p>Address:</p>
+		    <input type="text" class="form-control" id="other2"  placeholder="" name="address" disabled="other2">
 		</div>
 		
 		<div class="form-group">
-		    <input type="text" class="form-control" id="other3" placeholder="City" name="city" disabled="other3">
+			<p>City:</p>
+		    <input type="text" class="form-control" id="other3" placeholder="" name="city" disabled="other3">
 		</div>
 		
 		<div class="form-group">
-		    <input type="text" class="form-control" id="other4" placeholder="State" name="state" disabled="other4">
+			<p>State:</p>
+		    <input type="text" class="form-control" id="other4" placeholder="" name="state" disabled="other4">
 		</div>
 		
 		<div class="form-group">
-		    <input type="text" class="form-control" id="other5" placeholder="Zip" name="zipcode" disabled="other5">
+			<p>Zip:</p>
+		    <input type="text" class="form-control" id="other5" placeholder="" name="zipcode" disabled="other5">
 		</div>
 
 		<hr>
