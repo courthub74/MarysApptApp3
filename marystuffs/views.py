@@ -76,3 +76,8 @@ def delete(request, list_id):
 		messages.success(request, ('Nothing To See Here...'))
 		return redirect('list')
 
+
+#MAPS PAGE
+def map(request):
+	return render(request, 'map.html', {})
+
