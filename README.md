@@ -13,3 +13,4 @@ Its been pushed to Heroku
 * Possibly add a visible calendar where the appointments are loaded
 * Add a Mapquest feature
 * Add a payment rail
+* Turn into a Mobile App
