@@ -65,7 +65,7 @@
 								<h4><span class="badge badge-dark">Location:</span></h4>
 								<!--<h4><a href="{% url 'map' %}" class="badge badge-dark left">Map of Location</a></h4>-->
 								</div>
-								<li class="list-group-item color hide">{{ info.location }}</li>
+								<li class="list-group-item color hide map">{{ info.location }}</li>
 									
 										
 								
@@ -80,6 +80,7 @@
 									}
 								</style>
 
+								<!--OnSite | InStudio-->
 								<script type="text/javascript">
 									var colorElements = document.querySelectorAll('.color');
 									colorElements.forEach(element => {
@@ -91,6 +92,33 @@
 									});
 								</script>
 
+								<style type="text/css">
+									.hideout {
+										display: none;
+									}
+								</style>
+
+								<!--Mappy-->
+								<script type="text/javascript">
+									var locElements = document.querySelectorAll('.map');
+									var mapElement = document.querySelectorAll('.mappy');
+									locElements.forEach(element => {
+
+									if (element.innerHTML == "OnSite") {
+										
+										console.log("hide me");
+																																
+									} else if (element.innerHTML == "InStudio") {
+										mapElement[0].classList.add('hideout');	
+										mapElement[2].classList.add('hideout');	
+										mapElement[7].classList.add('hideout');															
+										console.log('show mappy');
+										}
+
+									});	
+									
+								</script>
+
 
 								<div id="locablock">
 									<li class="list-group-item go">{{ info.loc_name }}</li>
@@ -98,7 +126,7 @@
 									<li class="list-group-item go">{{ info.city }}</li>
 									<li class="list-group-item go">{{ info.state }}</li>
 									<li class="list-group-item go">{{ info.zipcode }}</li>
-									<a href="{% url 'map' %}" class="badge badge-secondary color">On the Map</a>
+									<a href="{% url 'map' %}" class="badge badge-secondary mappy">On the Map</a>
 								</div>
 								<hr>
 								<!--EDIT BUTTON-->
