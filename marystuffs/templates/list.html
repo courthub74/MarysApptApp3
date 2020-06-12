@@ -134,8 +134,8 @@
 
 							<!--Mappy-->
 								<script type="text/javascript">
-									var locElements = document.querySelectorAll('.map');
-									var mapElement = document.querySelectorAll('.mappy');
+									//var locElements = document.querySelectorAll('.map');
+									//var mapElement = document.querySelectorAll('.mappy');
 									const appendElement = document.getElementsByClassName('append');
 
 									// 	locElements.forEach(element => {
@@ -156,7 +156,7 @@
 
 									for (let i = 0; i < appendElement.length; i++){
 										console.log("elements", appendElement[i])
-										if (appendElement[i].children[0].innerHTML === "InStudio"){
+										if (appendElement[i].children[0].innerHTML == "InStudio"){
 											console.log("child", appendElement[i].children[0])
 											appendElement[i].children[6].classList.add("hideout");
 										}
