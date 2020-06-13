@@ -104,11 +104,7 @@
 									});
 								</script>
 
-								<style type="text/css">
-									.hideout {
-										display: none;
-									}
-								</style>
+						
 
 								<!--EDIT BUTTON-->
 								<a href="{% url 'edit' info.id %}" class="btn btn-block btn-dark">Edit Appointment</a>
@@ -132,45 +128,38 @@
 							</script>
 
 
-							<!--Mappy-->
-								<script type="text/javascript">
-									//var locElements = document.querySelectorAll('.map');
-									//var mapElement = document.querySelectorAll('.mappy');
-									const appendElement = document.getElementsByClassName('append');
+							<style type="text/css">
+									.hideout {
+										display: none;
+									}
+								</style>
 
-									// 	locElements.forEach(element => {
 
-									// if (element.innerHTML == "OnSite") {
-										
-									// 	console.log("show mappy");	
-
-									// } else if (element.innerHTML == "InStudio") {
-									// 	mapElement[0].classList.add('hideout');	
-									// 	mapElement[2].classList.add('hideout');	
-									// 	mapElement[7].classList.add('hideout');															
-									// 	console.log('hide mappy');
-
-									// 	}
-
-									// });	
-
-									for (let i = 0; i < appendElement.length; i++){
-										console.log("elements", appendElement[i])
-										if (appendElement[i].children[0].innerHTML == "InStudio"){
-											console.log("child", appendElement[i].children[0])
-											appendElement[i].children[6].classList.add("hideout");
-										}
-									}									
-																				
-								</script>
+						
 
 
 						</ul>
+
 					</div>
+
+
 				{% endfor %}
 			{% endif %}
 
 
 </div>
+
+							<!--Mappy-->
+								<script type="text/javascript">
+									const appendElement = document.getElementsByClassName('append');
+									for (let i=0; i<appendElement.length; i++){
+										console.log("element", appendElement[i])
+										if (appendElement[i].children[0].innerHTML == "InStudio"){
+											console.log("child", appendElement[i].children[0])
+											appendElement[i].children[6].classList.add("hideout");
+										}
+									}						
+																				
+								</script>
 
 {% endblock %}
