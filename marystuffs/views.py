@@ -81,3 +81,8 @@ def delete(request, list_id):
 def map(request):
 	return render(request, 'map.html', {})
 
+
+#PAYMENTS PAGE
+def payments(request):
+	return render(request, 'payments.html', {})
+

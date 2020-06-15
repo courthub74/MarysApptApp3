@@ -304,12 +304,12 @@
 			<div class="form-group">
 				<input type="hidden" value="{{ get_appointment.id }}" name="id">
 			</div>
-
 				<button type="submit" class="btn btn-block btn-secondary">Edit Entry</button>
-			
 			<hr>
 		</div>
 	</form>
+
+
 
 	<!--DELETE BUTTON-->
 		<div class="container">
@@ -318,7 +318,14 @@
 			<input type="hidden" value="{{ get_appointment.id }}" name="id">
 			<button type="submit" class="btn btn-block btn-danger">Delete Entry</button>
 		</form>
+		<hr>
+		</div>
 
+
+		<!--CANCEL-->
+		<div class="container">
+		<a href="{% url 'list' %}" type="submit" class="btn btn-block btn-info">Cancel Edit</a>
+		<hr>
 		</div>
 
 	  <br><br>
