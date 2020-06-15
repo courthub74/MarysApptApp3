@@ -73,7 +73,7 @@
 									<li class="list-group-item go">{{ info.city }}</li>
 									<li class="list-group-item go">{{ info.state }}</li>
 									<li class="list-group-item go">{{ info.zipcode }}</li>
-									<a href="{% url 'map' %}" class="badge badge-secondary mappy">On the Map</a>
+									<a href="https://www.google.com/maps/dir/40+West+Howard+Street+Pontiac+MI+48342/{{ info.address }}+{{ info.city }}+{{ info.state }}+{{ info.zipcode }}" class="badge badge-secondary mappy">On the Map</a>
 								</div>
 
 								<div id="locablock">
@@ -158,8 +158,9 @@
 											console.log("child", appendElement[i].children[0])
 											appendElement[i].children[6].classList.add("hideout");
 										}
-									}						
-																				
+									}																									
 								</script>
+
+								
 
 {% endblock %}
