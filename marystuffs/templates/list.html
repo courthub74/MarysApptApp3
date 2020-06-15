@@ -149,7 +149,7 @@
 
 </div>
 
-							<!--Mappy-->
+							<!--Hide map for Whole-->
 								<script type="text/javascript">
 									const appendElement = document.getElementsByClassName('append');
 									for (let i=0; i<appendElement.length; i++){
@@ -161,6 +161,18 @@
 									}																									
 								</script>
 
-								
+
+							<!--Hide map for Partial-->
+								<script type="text/javascript">
+									const someElement = document.getElementsByClassName('append');
+									for (let i=0; i<someElement.length; i++){
+										if (someElement[i].children[2].innerHTML == "None"){
+											someElement[i].children[6].classList.add("hideout");
+										}
+									}
+								</script>
+
+								<!--Putting the same element on two different lanes for two purposes-->
+
 
 {% endblock %}
