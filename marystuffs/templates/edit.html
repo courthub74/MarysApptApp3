@@ -311,7 +311,7 @@
 
 
 
-	<!--DELETE BUTTON-->
+	<!--DELETE BUTTON--> <!--ADD an ALERT-->
 		<div class="container">
 		<form method="POST" action="{% url 'delete' get_appointment.id %}">
 			{% csrf_token %}
@@ -324,7 +324,7 @@
 
 		<!--CANCEL-->
 		<div class="container">
-		<a href="{% url 'list' %}" type="submit" class="btn btn-block btn-info">Cancel Edit</a>
+		<a href="{% url 'list' %}" type="submit" class="btn btn-block btn-primary">Cancel the Edit</a>
 		<hr>
 		</div>
 

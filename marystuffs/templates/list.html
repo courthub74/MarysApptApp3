@@ -38,30 +38,30 @@
 				{% for info in all_appointments %}
 					<div class="col-sm">
 						<ul class="list-group">
-								<li class="list-group-item list-group-item-secondary">Appointment {{ forloop.counter}}:</li>
-							<li class="list-group-item">First: <strong>{{ info.name }}</strong></li>
-							<li class="list-group-item">Last: <strong>{{ info.last }}</strong></li>
+								<li class="list-group-item list-group-item-secondary">Appointment {{ forloop.counter}} | <b>{{ info.name}}</b> <b>{{ info.last }}</b> | {{ info.date }}</li>
+								<li class="list-group-item">Occupation: <strong>{{ info.occupation }}</strong></li>
+							    <li class="list-group-item">Category of Shoot: <strong>{{ info.category }}</strong></li>
+
+								
+
+
+
+							<!-- <li class="list-group-item">First: <strong>{{ info.name }}</strong></li>
+							<li class="list-group-item">Last: <strong>{{ info.last }}</strong></li> -->
 							<li class="list-group-item">Email: <strong>{{ info.email }}</strong></li>
 							<li class="list-group-item">Phone: <strong>{{ info.phone }}</strong></li>
-							<li class="list-group-item">Occupation: <strong>{{ info.occupation }}</strong></li>
-							<li class="list-group-item">Category of Shoot: <strong>{{ info.category }}</strong></li>
-							<li class="list-group-item">Date: <strong>{{ info.date }}</strong></li>
+							<!-- <li class="list-group-item">Occupation: <strong>{{ info.occupation }}</strong></li>
+							<li class="list-group-item">Category of Shoot: <strong>{{ info.category }}</strong></li> -->
+							<!-- <li class="list-group-item">Date: <strong>{{ info.date }}</strong></li> -->
 							<li class="list-group-item">Start Time: <strong>{{ info.start}}</strong></li>
 							<li class="list-group-item">End Time: <strong>{{ info.end }}</strong></li>
 							<br>
 
 
-							<style type="text/css">
-								.left {
-									margin-left: 60px;
-								}
-							
-							</style>
-
-
 
 							<div class="container">
 								<div class="row">
+
 								<h4><span class="badge badge-dark">Location:</span></h4>
 								<!--<h4><a href="{% url 'map' %}" class="badge badge-dark left">Map of Location</a></h4>-->
 								</div>
@@ -73,12 +73,21 @@
 									<li class="list-group-item go">{{ info.city }}</li>
 									<li class="list-group-item go">{{ info.state }}</li>
 									<li class="list-group-item go">{{ info.zipcode }}</li>
-									<a href="https://www.google.com/maps/dir/40+West+Howard+Street+Pontiac+MI+48342/{{ info.address }}+{{ info.city }}+{{ info.state }}+{{ info.zipcode }}" class="badge badge-secondary mappy">On the Map</a>
+									<a href="https://www.google.com/maps/dir/40+West+Howard+Street+Pontiac+MI+48342/{{ info.address }}+{{ info.city }}+{{ info.state }}+{{ info.zipcode }}" class="badge badge-secondary mappy">Click for Directions</a>
 								</div>
 
-								<div id="locablock">
-																							
-								</div>
+
+							<style type="text/css">
+								.left {
+									margin-left: 60px;
+								}
+							
+							</style>
+
+
+
+
+								
 								
 									
 								<hr>
