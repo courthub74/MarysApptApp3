@@ -104,20 +104,9 @@
 
 		<script>
 			$("#datepicker").datepicker({
-				onSelect: function(dateText, dateObj){
-					$('.string').append(dateText);
-					currDate = new Date(dateText);
-					console.log(currDate);
-					$('.getday').append(currDate.getDay());
-
-					function getWeekDay (date) {
-						var days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
-						return days[date.getDay()]
-					}
-
-					$('.getweekday').append(getWeekDay(currDate));
-				}
+				dateFormat: 'DD, d MM, yy',
 			});
+			
 		</script>
 			
 

@@ -38,7 +38,7 @@
 				{% for info in all_appointments %}
 					<div class="col-sm">
 						<ul class="list-group">
-							<li class="list-group-item list-group-item-secondary"><strong>Appointment {{ forloop.counter}}:</strong></li>
+								<li class="list-group-item list-group-item-secondary">Appointment {{ forloop.counter}}:</li>
 							<li class="list-group-item">First: <strong>{{ info.name }}</strong></li>
 							<li class="list-group-item">Last: <strong>{{ info.last }}</strong></li>
 							<li class="list-group-item">Email: <strong>{{ info.email }}</strong></li>
@@ -109,7 +109,7 @@
 								<!--EDIT BUTTON-->
 								<a href="{% url 'edit' info.id %}" class="btn btn-block btn-dark">Edit Appointment</a>
 							</div>
-							<br>
+							
 
 
 							<style type="text/css">
