@@ -14,4 +14,5 @@ Its been pushed to Heroku
 * ~~Add a Mapquest feature~~
 * Add a payment rail
 * Turn into a Mobile App
-* Extract the DAY from the DATEPICKER and display it
+* ~~Extract the DAY from the DATEPICKER and display it~~
+* List appts in chronological order
