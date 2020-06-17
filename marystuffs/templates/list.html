@@ -1,8 +1,6 @@
 {% extends 'base.html' %}
 
 
-
-
 {% block content %}   
 
 <br>
@@ -84,7 +82,7 @@
 									<li class="list-group-item go">{{ info.city }}</li>
 									<li class="list-group-item go">{{ info.state }}</li>
 									<li class="list-group-item go">{{ info.zipcode }}</li>
-									<a href="https://www.google.com/maps/dir/40+West+Howard+Street+Pontiac+MI+48342/{{ info.address }}+{{ info.city }}+{{ info.state }}+{{ info.zipcode }}" class="badge badge-secondary mappy">Click for Directions</a>
+									<a href="https://www.google.com/maps/dir/40+West+Howard+Street+Pontiac+MI+48342/{{ info.address }}+{{ info.city }}+{{ info.state }}+{{ info.zipcode }}" target="_blank" class="badge badge-secondary mappy">Click for Directions</a>
 								</div>
 
 
