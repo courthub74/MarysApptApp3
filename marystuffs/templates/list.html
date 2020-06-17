@@ -32,29 +32,40 @@
 			{% endif %}
 			</div>
 	<!--<li class="list-group-item list-group-item-secondary"><h2>Appointments Set:</h2></li>-->
-	<br>		
+	<br>
+
+
+	<style type="text/css">
+		.lower {
+			padding: 2px 10px
+			 
+		}
+
+	</style>		
 		<div class="container">
 			{% if all_appointments %}
 				{% for info in all_appointments %}
 					<div class="col-sm">
 						<ul class="list-group">
-								<li class="list-group-item list-group-item-secondary">Appointment {{ forloop.counter}} | <b>{{ info.name}}</b> <b>{{ info.last }}</b> | {{ info.date }}</li>
-								<li class="list-group-item">Occupation: <strong>{{ info.occupation }}</strong></li>
-							    <li class="list-group-item">Category of Shoot: <strong>{{ info.category }}</strong></li>
-
-								
-
-
-
-							<!-- <li class="list-group-item">First: <strong>{{ info.name }}</strong></li>
-							<li class="list-group-item">Last: <strong>{{ info.last }}</strong></li> -->
-							<li class="list-group-item">Email: <strong>{{ info.email }}</strong></li>
-							<li class="list-group-item">Phone: <strong>{{ info.phone }}</strong></li>
+								<!--Appointment Info-->
+								<li class="list-group-item list-group-item-secondary">Appointment {{ forloop.counter}} | <b>{{ info.name}}</b> <b>{{ info.last }}</b></li>
+								<li class="list-group-item">Date: <strong>{{ info.date }}</strong></li>
+								<li class="list-group-item">Start Time: <strong>{{ info.start}}</strong></li>
+								<li class="list-group-item">End Time: <strong>{{ info.end }}</strong></li>
+								<br>
+								<!--Client Info-->
+								<div class="col-sm">
+									<li class="list-group-item list-group-item-secondary lower">Client Info</li>
+									<li class="list-group-item">Occupation: <strong>{{ info.occupation }}</strong></li>
+								    <li class="list-group-item">Category of Shoot: <strong>{{ info.category }}</strong></li>
+									<li class="list-group-item">Email: <strong>{{ info.email }}</strong></li>
+									<li class="list-group-item">Phone: <strong>{{ info.phone }}</strong></li>
+								</div>
 							<!-- <li class="list-group-item">Occupation: <strong>{{ info.occupation }}</strong></li>
 							<li class="list-group-item">Category of Shoot: <strong>{{ info.category }}</strong></li> -->
 							<!-- <li class="list-group-item">Date: <strong>{{ info.date }}</strong></li> -->
-							<li class="list-group-item">Start Time: <strong>{{ info.start}}</strong></li>
-							<li class="list-group-item">End Time: <strong>{{ info.end }}</strong></li>
+							<!-- <li class="list-group-item">Start Time: <strong>{{ info.start}}</strong></li>
+							<li class="list-group-item">End Time: <strong>{{ info.end }}</strong></li> -->
 							<br>
 
 
