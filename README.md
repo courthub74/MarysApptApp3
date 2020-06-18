@@ -9,7 +9,7 @@ Its been pushed to Heroku
 * ~~Transfer the Location Radio Dial information~~
 * ~~Clear the 'Nones' from the Onsite fields~~
 * ~~Make back to Appts list pop up only on search page~~
-* Blank out back dates
+* ~~Blank out back dates~~
 * Possibly add a visible calendar where the appointments are loaded
 * ~~Add a Mapquest feature~~
 * Add a payments
