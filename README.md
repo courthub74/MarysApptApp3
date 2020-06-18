@@ -1,6 +1,7 @@
 # MarysApptApp3
-Mary's Appointment App with Dropdowns and Timepickers
-Its been pushed to Heroku
+Mary's Appointment App a customized scheduling app
+for the gig economy worker. With Dropdowns and Timepickers
+Its been pushed to Heroku for testing.
 
 ## Things to Conquer
 * ~~Delete Button Controversy~~
