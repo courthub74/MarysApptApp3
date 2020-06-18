@@ -12,7 +12,8 @@ Its been pushed to Heroku
 * Blank out back dates
 * Possibly add a visible calendar where the appointments are loaded
 * ~~Add a Mapquest feature~~
-* Add a payment rail
+* Add a payments
+     * ~~link to Paypal~~
 * Turn into a Mobile App
 * ~~Extract the DAY from the DATEPICKER and display it~~
 * List appts in chronological order
