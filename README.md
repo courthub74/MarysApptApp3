@@ -1,6 +1,7 @@
 # MarysApptApp3
-Mary's Appointment App with Dropdowns and Timepickers
-Its been pushed to Heroku
+Mary's Appointment App a customized scheduling app
+for the gig economy worker. With Dropdowns and Timepickers
+Its been pushed to Heroku for testing.
 
 ## Things to Conquer
 * ~~Delete Button Controversy~~
@@ -9,7 +10,7 @@ Its been pushed to Heroku
 * ~~Transfer the Location Radio Dial information~~
 * ~~Clear the 'Nones' from the Onsite fields~~
 * ~~Make back to Appts list pop up only on search page~~
-* Blank out back dates
+* ~~Blank out back dates~~
 * Possibly add a visible calendar where the appointments are loaded
 * ~~Add a Mapquest feature~~
 * Add a payments
