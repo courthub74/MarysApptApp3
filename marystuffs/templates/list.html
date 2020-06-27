@@ -45,17 +45,21 @@
 				{% for info in all_appointments %}
 					<div class="col-sm">
 						<ul class="list-group">
+
+
 								<!--Appointment Info-->
 								<li class="list-group-item list-group-item-secondary">Appointment {{ forloop.counter}} | <b>{{ info.name}}</b> <b>{{ info.last }}</b></li>
 								<li class="list-group-item">Date: <strong>{{ info.date }}</strong></li>
+								<li class="list-group-item">Category of Shoot: <strong>{{ info.category }}</strong></li>
 								<li class="list-group-item">Start Time: <strong>{{ info.start}}</strong></li>
 								<li class="list-group-item">End Time: <strong>{{ info.end }}</strong></li>
 								<br>
+
+
 								<!--Client Info-->
 								<div class="col-sm">
 									<li class="list-group-item list-group-item-secondary lower">Client Info</li>
 									<li class="list-group-item">Occupation: <strong>{{ info.occupation }}</strong></li>
-								    <li class="list-group-item">Category of Shoot: <strong>{{ info.category }}</strong></li>
 									<li class="list-group-item">Email: <strong>{{ info.email }}</strong></li>
 									<li class="list-group-item">Phone: <strong>{{ info.phone }}</strong></li>
 								</div>
